@@ -7,7 +7,10 @@ class Movie{
     
     public function setDurata($lunghezza) {
         if($lunghezza < 100 ){
-            $this->lunghezza = "Film di breve durata";
+            $this->lunghezza = "film di breve durata";
+        }
+        else{
+            $this->lunghezza = "film di lunga durata";
         }
     }
      
@@ -43,6 +46,6 @@ $durata_movie_1 = $movie_1->getDurata();
     </pre>
         <p>Il genere del film è :<?php echo $movie_1->genere; ?></p>
         <p>Il film è stato fatto in :<?php echo $movie_1->nazionalita; ?></p>
-        <p><?php echo $movie_1->getDurata() ?></p>
+        <p>Questo è un <?php echo $movie_1->getDurata(); ?></p>
 </body>
 </html>
