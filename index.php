@@ -3,11 +3,15 @@
 class Movie{
     public $nazionalita;
     public $genere;
+
+    function __construct($_genere) {
+        $this->genere = $_genere;
+    }
 }
 
-$movie_1 = new Movie();
-$movie_1->genere = "Horror";
-$movie_1->nazionalita = "USA"; 
+$movie_1 = new Movie("Horror");
+//echo $movie_1->genere;
+$movie_1->nazionalita = "USA";  
 
 ?>
 
@@ -21,8 +25,9 @@ $movie_1->nazionalita = "USA";
 </head>
 <body>
     <pre>
-        <?php var_dump($movie_1);?>
+        <!-- <?php var_dump($movie_1);?> -->
     </pre>
-        <?php echo $movie_1->genere; ?>
+        <p>Il genere del film è :<?php echo $movie_1->genere; ?></p>
+        <p>Il film è stato fatto in :<?php echo $movie_1->nazionalita; ?></p>
 </body>
 </html>
