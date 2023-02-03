@@ -1,3 +1,16 @@
+<?php
+
+class Movie{
+    public $nazionalita;
+    public $genere;
+}
+
+$movie_1 = new Movie();
+$movie_1->genere = "Horror";
+$movie_1->nazionalita = "USA"; 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +20,9 @@
     <title>PHP-OOP-1</title>
 </head>
 <body>
-    
+    <pre>
+        <?php var_dump($movie_1);?>
+    </pre>
+        <?php echo $movie_1->genere; ?>
 </body>
 </html>
